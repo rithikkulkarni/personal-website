@@ -34,7 +34,7 @@ export function Experience() {
     {
       company: 'SitSense',
       role: 'Chief Product Officer',
-      period: 'May 2025 - Mar 2026',
+      period: 'May 2025 - Jan 2026',
       location: 'Raleigh, NC',
       companyLogo: '/images/logos/sitsense_logo.jpg',
       achievements: [

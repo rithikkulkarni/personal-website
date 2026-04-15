@@ -87,7 +87,7 @@ export function Projects() {
     title: 'CacheForge (LLM Research)',
     description:
       'Explored LLM-driven optimization strategies for CPU cache systems using a novel multi-agent framework where larger models guide smaller ones to improve policy performance.',
-    image: '/images/llmresearch.jpg',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tags: ['Python', 'PyTorch', 'LLMs', 'Systems', 'Research'],
     github: '/CacheForge_Paper.pdf',
     githubLabel: 'Paper',
@@ -99,7 +99,7 @@ export function Projects() {
     title: 'Food Finder',
     description:
       'A group decision-making web app with a versus-style interface for choosing restaurants. Built full-stack system with real-time voting and location-based search.',
-    image: '/images/foodfinder__.JPG',
+    image: 'https://images.unsplash.com/photo-1651440204296-a79fa9988007?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tags: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'APIs'],
     github: 'https://github.com/rithikkulkarni/csc-510-proj-2',
     demo: '#',
@@ -109,7 +109,7 @@ export function Projects() {
     title: 'Content Insights',
     description:
       'An ML-powered web tool that analyzes YouTube videos pre-publication using visual and textual features. Trained models on 150K+ videos and deployed a FastAPI backend for real-time feedback.',
-    image: '/images/contentinsights_image.jpg',
+    image: 'https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tags: ['Python', 'FastAPI', 'PyTorch', 'OpenCV', 'scikit-learn'],
     github: 'tbd',
     demo: '#',
