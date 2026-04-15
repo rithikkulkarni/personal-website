@@ -171,7 +171,7 @@ export function Experience() {
                       <Lock size={16} />
                     </span>
                     <p className="pt-1 text-sm text-foreground/75">
-                      This role is currently under a strict NDA. At my CEO&rsquo;s request, product
+                      This role is currently under a strict NDA. Product
                       details are intentionally withheld while development remains
                       confidential.
                     </p>
