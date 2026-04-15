@@ -3,8 +3,8 @@ import type { ReactNode } from 'react';
 import '../styles/index.css';
 
 export const metadata: Metadata = {
-  title: 'Personal Website',
-  description: 'Portfolio site migrated from Figma Make UI',
+  title: 'Rithik Kulkarni',
+  description: 'Software & ML Engineer',
 };
 
 export default function RootLayout({
