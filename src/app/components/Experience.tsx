@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Briefcase, Calendar, Lock, MapPin } from 'lucide-react';
 
 type ExperienceItem = {
   company: string;
@@ -28,11 +28,7 @@ export function Experience() {
       period: 'Jan 2026 - Present',
       location: 'Chapel Hill, NC',
       companyLogo: '/images/logos/ss_logo.jpg',
-      achievements: [
-        'Built and deployed a real-time computer vision posture analysis system delivering live feedback to 100+ active users',
-        'Designed a patent-pending scoring algorithm using pose estimation, temporal smoothing, and weighted heuristics',
-        'Developed a low-latency streaming pipeline and feature extraction system for future ML model training',
-      ],
+      achievements: [],
       technologies: ['Python', 'MediaPipe', 'Next.js', 'TypeScript', 'Computer Vision'],
     },
     {
@@ -105,77 +101,96 @@ export function Experience() {
         </motion.div>
 
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-background rounded-xl p-8 border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg"
-            >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-4">
-                <div className="flex items-center gap-4 flex-1">
-                  <div className="relative w-14 h-14 rounded-lg border border-border bg-card overflow-hidden shrink-0">
-                    <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-foreground/80">
-                      {getCompanyInitials(exp.company)}
+          {experiences.map((exp, index) => {
+            const isConfidential = exp.achievements.length === 0;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className="bg-background rounded-xl p-8 border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-4">
+                  <div className="flex items-center gap-4 flex-1">
+                    <div className="relative w-14 h-14 rounded-lg border border-border bg-card overflow-hidden shrink-0">
+                      <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-foreground/80">
+                        {getCompanyInitials(exp.company)}
+                      </div>
+                      {exp.companyLogo && (
+                        <img
+                          src={exp.companyLogo}
+                          alt={`${exp.company} logo`}
+                          className="relative z-10 w-full h-full object-cover"
+                          onError={(event) => {
+                            event.currentTarget.style.display = 'none';
+                          }}
+                        />
+                      )}
                     </div>
-                    {exp.companyLogo && (
-                      <img
-                        src={exp.companyLogo}
-                        alt={`${exp.company} logo`}
-                        className="relative z-10 w-full h-full object-cover"
-                        onError={(event) => {
-                          event.currentTarget.style.display = 'none';
-                        }}
-                      />
-                    )}
+
+                    <div>
+                      <h3 className="text-2xl text-foreground mb-1">{exp.role}</h3>
+                      <p className="text-xl text-primary">{exp.company}</p>
+                    </div>
                   </div>
 
-                  <div>
-                    <h3 className="text-2xl text-foreground mb-1">{exp.role}</h3>
-                    <p className="text-xl text-primary">{exp.company}</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-2 md:text-right md:ml-6">
-                  <div className="flex items-center gap-2 text-muted-foreground md:justify-end">
-                    <Calendar size={16} />
-                    <span className="text-sm">{exp.period}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground md:justify-end">
-                    <MapPin size={16} />
-                    <span className="text-sm">{exp.location}</span>
+                  <div className="flex flex-col gap-2 md:text-right md:ml-6">
+                    <div className="flex items-center gap-2 text-muted-foreground md:justify-end">
+                      <Calendar size={16} />
+                      <span className="text-sm">{exp.period}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-muted-foreground md:justify-end">
+                      <MapPin size={16} />
+                      <span className="text-sm">{exp.location}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="mb-4">
-                <h4 className="flex items-center gap-2 text-foreground mb-3">
-                  <Briefcase size={18} />
-                  Key Achievements
-                </h4>
-                <ul className="space-y-2 list-disc pl-6 marker:text-primary">
-                  {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-foreground/70">
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                {!isConfidential && (
+                  <div className="mb-4">
+                    <h4 className="flex items-center gap-2 text-foreground mb-3">
+                      <Briefcase size={18} />
+                      Key Achievements
+                    </h4>
+                    <ul className="space-y-2 list-disc pl-6 marker:text-primary">
+                      {exp.achievements.map((achievement, achIndex) => (
+                        <li key={achIndex} className="text-foreground/70">
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-              <div className="flex flex-wrap gap-2">
-                {exp.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-secondary/50 text-foreground/80 rounded-full text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                {isConfidential ? (
+                  <div className="flex items-start gap-3 rounded-lg border border-border bg-secondary/20 px-4 py-3">
+                    <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground">
+                      <Lock size={16} />
+                    </span>
+                    <p className="pt-1 text-sm text-foreground/75">
+                      This role is currently under a strict NDA. At my CEO&rsquo;s request, product
+                      details are intentionally withheld while development remains
+                      confidential.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-secondary/50 text-foreground/80 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
