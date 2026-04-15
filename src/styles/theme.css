@@ -2,6 +2,7 @@
 
 :root {
   --font-size: 16px;
+  --font-family-base: "libertinage-c", "Times New Roman", Georgia, serif;
   --background: #f5f1e8;
   --foreground: #2c2416;
   --card: #fdfcfa;
@@ -126,6 +127,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-family-base);
   }
 
   /**

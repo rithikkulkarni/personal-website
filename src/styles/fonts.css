@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "libertinage-c";
+  src:
+    local("Libertinage C"),
+    local("Libertinage-C"),
+    local("libertinage-c");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

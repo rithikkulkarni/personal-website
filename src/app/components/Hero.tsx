@@ -24,7 +24,7 @@ export function Hero() {
           {/* Headshot */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1.2, opacity: 1 }}
+            animate={{ scale: 1.1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-8"
           >
@@ -60,7 +60,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="text-lg text-foreground/70 max-w-2xl mx-auto mb-8"
           >
-            Building intelligent systems and elegant solutions that make a difference.
+            Building intelligent systems and solutions that make a difference.
+            <br></br>
             Passionate about AI, full-stack development, and creating impactful products.
           </motion.p>
 

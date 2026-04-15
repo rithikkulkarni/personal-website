@@ -25,7 +25,7 @@ export function Skills() {
     {
       title: 'Web Development',
       icon: Layers,
-      skills: ['React', 'Next.js', 'Node.js', 'HTML/CSS', 'UI Design', 'Supabase'],
+      skills: ['React', 'Next.js', 'Node.js', 'HTML/CSS', 'UI/UX Design', 'Supabase'],
     },
     {
       title: 'Databases',
@@ -66,7 +66,7 @@ export function Skills() {
         >
           <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Skills & Technologies</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building cutting-edge software and AI solutions
+            A comprehensive toolkit for building cutting-edge software and AI solutions.
           </p>
         </motion.div>
 

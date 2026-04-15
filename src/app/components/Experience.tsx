@@ -25,8 +25,8 @@ export function Experience() {
     {
       company: 'Stealth Startup',
       role: 'Machine Learning Engineer',
-      period: 'May 2025 - Mar 2026',
-      location: 'Raleigh, NC',
+      period: 'Jan 2026 - Present',
+      location: 'Chapel Hill, NC',
       companyLogo: '/images/logos/ss_logo.jpg',
       achievements: [
         'Built and deployed a real-time computer vision posture analysis system delivering live feedback to 100+ active users',
@@ -84,7 +84,7 @@ export function Experience() {
         'Conducted usability testing to guide design decisions, increasing System Usability Score from 62 to 79',
         'Collaborated with developers to contribute pull requests for frontend improvements',
       ],
-      technologies: ['HTML/CSS', 'JavaScript', 'UI Design', 'Usability Testing', 'Agile'],
+      technologies: ['HTML/CSS', 'JavaScript', 'UI/UX Design', 'Usability Testing', 'Agile'],
     },
   ];
 
@@ -100,7 +100,7 @@ export function Experience() {
         >
           <h2 className="text-4xl md:text-5xl mb-4 text-foreground">Work Experience</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My professional journey building innovative solutions
+            My professional journey building innovative solutions.
           </p>
         </motion.div>
 

@@ -38,7 +38,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection('home')}
-            className="text-xl font-semibold text-foreground hover:text-primary transition-colors"
+            className="text-xl font-semibold text-foreground hover:text-primary transition-colors cursor-pointer"
           >
             Portfolio
           </button>
@@ -49,7 +49,7 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/80 hover:text-primary transition-colors cursor-pointer"
               >
                 {link.label}
               </button>
@@ -59,7 +59,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground cursor-pointer"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -72,7 +72,7 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left py-3 text-foreground/80 hover:text-primary transition-colors"
+                className="block w-full text-left py-3 text-foreground/80 hover:text-primary transition-colors cursor-pointer"
               >
                 {link.label}
               </button>
