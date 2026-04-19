@@ -199,7 +199,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors cursor-pointer"
                     >
-                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-orange-300 bg-orange-200/70 text-orange-700 transition-colors hover:bg-orange-300/80 hover:text-orange-800">
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border bg-secondary/70 text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
                         {project.isPaperLink ? <FileText size={16} /> : <Github size={16} />}
                       </span>
                       <span className="text-sm">{project.githubLabel ?? 'Code'}</span>
@@ -212,7 +212,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors cursor-pointer"
                     >
-                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-orange-300 bg-orange-200/70 text-orange-700 transition-colors hover:bg-orange-300/80 hover:text-orange-800">
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border bg-secondary/70 text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
                         <ExternalLink size={16} />
                       </span>
                       <span className="text-sm">Demo</span>
@@ -231,7 +231,7 @@ export function Projects() {
           if (!open) setSelectedProjectIndex(null);
         }}
       >
-        <DialogContent className="max-w-3xl w-[min(92vw,900px)] p-0 overflow-hidden [&>[data-slot=dialog-close]]:left-4 [&>[data-slot=dialog-close]]:right-auto [&>[data-slot=dialog-close]]:rounded-md [&>[data-slot=dialog-close]]:border [&>[data-slot=dialog-close]]:border-red-700 [&>[data-slot=dialog-close]]:bg-red-600 [&>[data-slot=dialog-close]]:text-white [&>[data-slot=dialog-close]]:opacity-100 [&>[data-slot=dialog-close]]:cursor-pointer [&>[data-slot=dialog-close]]:hover:bg-red-600/80 [&>[data-slot=dialog-close]]:hover:opacity-100 [&>[data-slot=dialog-close]]:data-[state=open]:bg-red-600">
+        <DialogContent className="max-w-3xl w-[min(92vw,900px)] p-0 overflow-hidden [&>[data-slot=dialog-close]]:left-4 [&>[data-slot=dialog-close]]:right-auto [&>[data-slot=dialog-close]]:rounded-md [&>[data-slot=dialog-close]]:border [&>[data-slot=dialog-close]]:border-border [&>[data-slot=dialog-close]]:bg-primary [&>[data-slot=dialog-close]]:text-primary-foreground [&>[data-slot=dialog-close]]:opacity-100 [&>[data-slot=dialog-close]]:cursor-pointer [&>[data-slot=dialog-close]]:hover:bg-primary/80 [&>[data-slot=dialog-close]]:hover:opacity-100 [&>[data-slot=dialog-close]]:data-[state=open]:bg-primary">
           {selectedProject && (
             <div className="bg-card">
               <div className="relative h-56 sm:h-72 overflow-hidden">
@@ -282,7 +282,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors cursor-pointer"
                     >
-                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-orange-300 bg-orange-200/70 text-orange-700 transition-colors hover:bg-orange-300/80 hover:text-orange-800">
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border bg-secondary/70 text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
                         {selectedProject.isPaperLink ? <FileText size={16} /> : <Github size={16} />}
                       </span>
                       <span className="text-sm">{selectedProject.githubLabel ?? 'Code'}</span>
@@ -295,7 +295,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors cursor-pointer"
                     >
-                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-orange-300 bg-orange-200/70 text-orange-700 transition-colors hover:bg-orange-300/80 hover:text-orange-800">
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border bg-secondary/70 text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
                         <ExternalLink size={16} />
                       </span>
                       <span className="text-sm">Demo</span>

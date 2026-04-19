@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
+
+const THEME_STORAGE_KEY = 'portfolio-theme';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +15,19 @@ export function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsDarkMode(document.documentElement.classList.contains('dark'));
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode((currentValue) => {
+      const nextValue = !currentValue;
+      document.documentElement.classList.toggle('dark', nextValue);
+      localStorage.setItem(THEME_STORAGE_KEY, nextValue ? 'dark' : 'light');
+      return nextValue;
+    });
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -43,7 +59,6 @@ export function Navigation() {
             Portfolio
           </button>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <button
@@ -54,18 +69,50 @@ export function Navigation() {
                 {link.label}
               </button>
             ))}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to olive dark mode'}
+              aria-pressed={isDarkMode}
+              className="group inline-flex h-9 w-16 items-center rounded-full border border-border bg-secondary/70 p-1 text-foreground shadow-sm transition-all duration-300 hover:border-primary/50 hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 cursor-pointer"
+            >
+              <span
+                className={`inline-flex h-7 w-7 items-center justify-center rounded-full bg-card text-primary shadow-sm transition-transform duration-300 ${
+                  isDarkMode ? 'translate-x-7' : 'translate-x-0'
+                }`}
+              >
+                {isDarkMode ? <Moon size={15} /> : <Sun size={15} />}
+              </span>
+            </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground cursor-pointer"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-3 md:hidden">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to olive dark mode'}
+              aria-pressed={isDarkMode}
+              className="inline-flex h-9 w-16 items-center rounded-full border border-border bg-secondary/70 p-1 text-foreground shadow-sm transition-all duration-300 hover:border-primary/50 hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/50 cursor-pointer"
+            >
+              <span
+                className={`inline-flex h-7 w-7 items-center justify-center rounded-full bg-card text-primary shadow-sm transition-transform duration-300 ${
+                  isDarkMode ? 'translate-x-7' : 'translate-x-0'
+                }`}
+              >
+                {isDarkMode ? <Moon size={15} /> : <Sun size={15} />}
+              </span>
+            </button>
+
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-foreground cursor-pointer"
+              aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             {navLinks.map((link) => (
