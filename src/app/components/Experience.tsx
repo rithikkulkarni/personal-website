@@ -23,13 +23,25 @@ function getCompanyInitials(company: string) {
 export function Experience() {
   const experiences: ExperienceItem[] = [
     {
-      company: 'Stealth Startup',
-      role: 'Machine Learning Engineer',
-      period: 'Jan 2026 - Present',
-      location: 'Chapel Hill, NC',
-      companyLogo: '/images/logos/ss_logo.jpg',
+      company: 'MetLife',
+      role: 'Data & Analytics Intern',
+      period: 'June 2026 - Aug 2026',
+      location: 'Cary, NC',
+      companyLogo: '/images/logos/metlife_logo.jpg',
       achievements: [],
-      technologies: ['Python', 'MediaPipe', 'Next.js', 'TypeScript', 'Computer Vision'],
+      technologies: ['LLMs', 'Zapier', 'n8n'],
+    },
+    {
+      company: 'Statesmen Consulting',
+      role: 'AI Engineer',
+      period: 'May 2026 - June 2026',
+      location: 'Charlotte, NC',
+      companyLogo: '/images/logos/statesmen_logo.jpg',
+      achievements: [
+        'Built AI prototypes for internal Statesmen research and for use by Statesmen clients',
+        'Documented prototypes and participated in working sessions to define product strategy and roadmap for future development',
+      ],
+      technologies: ['LLMs', 'Zapier', 'n8n'],
     },
     {
       company: 'SitSense',
@@ -172,9 +184,7 @@ export function Experience() {
                       <Lock size={16} />
                     </span>
                     <p className="pt-1 text-sm text-foreground/75">
-                      This role is currently under a strict NDA. Product
-                      details are intentionally withheld while development remains
-                      confidential.
+                      This role is underway and details are confidential until completion. Please check back soon for updates on the projects and achievements from this experience.
                     </p>
                   </div>
                 ) : (
