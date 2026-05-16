@@ -28,8 +28,12 @@ export function Experience() {
       period: 'June 2026 - Aug 2026',
       location: 'Cary, NC',
       companyLogo: '/images/logos/metlife_logo.jpg',
-      achievements: [],
-      technologies: ['LLMs', 'Zapier', 'n8n'],
+      achievements: [
+        'Rapidly prototyped AI-powered workflows and proof-of-concept applications to evaluate practical business use cases across client engagements',
+        'Collaborated directly with the founder to assess LLM capabilities, automation opportunities, and implementation feasibility for prospective AI solutions',
+        'Researched, tested, and documented emerging AI tools, agentic workflows, and integration patterns to inform Statesmen’s client offerings and product strategy',
+      ],
+      technologies: ['LLMs', 'Zapier', 'n8n', 'AI Agents', 'APIs'],
     },
     {
       company: 'Statesmen Consulting',
