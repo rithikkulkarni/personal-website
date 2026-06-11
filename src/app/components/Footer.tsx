@@ -14,16 +14,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <p className="text-foreground/70 mb-2">
+            {/* <p className="text-foreground/70 mb-2">
               Let's build something amazing together
-            </p>
-            <p className="text-sm text-muted-foreground flex items-center gap-1 justify-center md:justify-start">
+            </p> */}
+            {/* <p className="text-sm text-muted-foreground flex items-center gap-1 justify-center md:justify-start">
               Made with <Heart size={14} className="text-primary fill-primary" /> using React &
               Tailwind CSS
-            </p>
+            </p> */}
           </div>
 
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
@@ -34,7 +34,7 @@ export function Footer() {
                 <link.icon size={18} />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center">
