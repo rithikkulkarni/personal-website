@@ -121,7 +121,7 @@ export function Projects() {
       'Open-source AI data analysis chatbot that converts natural language into SQL, generates charts, manipulates tables, and explains its results.',
     image: 'https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tags: ['Large Languages Models', 'Prompt Engineering', 'TypeScript', 'React', 'APIs'],
-    github: 'https://github.com/rithikkulkarni/csc-510-proj-2',
+    github: 'https://github.com/rithikkulkarni/foodfinder',
     demo: '#',
     featured: true,
   },
