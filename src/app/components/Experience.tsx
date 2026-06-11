@@ -29,23 +29,25 @@ export function Experience() {
       location: 'Cary, NC',
       companyLogo: '/images/logos/metlife_logo.jpg',
       achievements: [
-        'Rapidly prototyped AI-powered workflows and proof-of-concept applications to evaluate practical business use cases across client engagements',
-        'Collaborated directly with the founder to assess LLM capabilities, automation opportunities, and implementation feasibility for prospective AI solutions',
-        'Researched, tested, and documented emerging AI tools, agentic workflows, and integration patterns to inform Statesmen’s client offerings and product strategy',
+        // 'Rapidly prototyped AI-powered workflows and proof-of-concept applications to evaluate practical business use cases across client engagements',
+        // 'Collaborated directly with the founder to assess LLM capabilities, automation opportunities, and implementation feasibility for prospective AI solutions',
+        // 'Researched, tested, and documented emerging AI tools, agentic workflows, and integration patterns to inform Statesmen’s client offerings and product strategy',
       ],
       technologies: ['LLMs', 'Zapier', 'n8n', 'AI Agents', 'APIs'],
     },
     {
       company: 'Statesmen Consulting',
-      role: 'AI Engineer',
+      role: 'AI Engineer Intern',
       period: 'May 2026 - June 2026',
       location: 'Charlotte, NC',
       companyLogo: '/images/logos/statesmen_logo.jpg',
       achievements: [
-        'Built AI prototypes for internal Statesmen research and for use by Statesmen clients',
-        'Documented prototypes and participated in working sessions to define product strategy and roadmap for future development',
+        'Built and demoed AI-powered workflows, agents, and automation prototypes for client engagements and internal research initiatives',
+        'Evaluated emerging AI technologies and business use cases to identify automation opportunities and improve operational efficiency',
+        'Collaborated directly with the founder to scope AI solutions, define requirements, and assess feasibility and business impact',
+        'Documented prototype architectures, capabilities, and limitations to support client recommendations and future product strategy',
       ],
-      technologies: ['LLMs', 'Zapier', 'n8n'],
+      technologies: ['AI Engineering', 'LLMs', 'Prompt Engineering', 'Workflow Automation', 'AI Agents', 'Zapier', 'n8n'],
     },
     {
       company: 'SitSense',
@@ -188,7 +190,7 @@ export function Experience() {
                       <Lock size={16} />
                     </span>
                     <p className="pt-1 text-sm text-foreground/75">
-                      This role is underway and details are confidential until completion. Please check back soon for updates on the projects and achievements from this experience.
+                      This role is underway and details are confidential until completion.
                     </p>
                   </div>
                 ) : (
